@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eslam Ayman — Brand &amp; Creative Lead</title>
+  <meta name="description" content="Eslam Ayman — Graphic Designer and Brand & Creative Lead with 7+ years across branding, campaigns, events and print. Visuals built to communicate, not just decorate.">
+  <meta property="og:title" content="Eslam Ayman — Brand & Creative Lead">
+  <meta property="og:description" content="Visuals built to communicate, not just decorate.">
+  <meta property="og:image" content="img/full/page-02.jpg">
+  <meta name="theme-color" content="#0a1330">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=Cairo:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"><span>View</span></div>
+
+<header class="nav" id="nav">
+  <a class="nav__logo" href="#top">Eslam<span>.</span></a>
+  <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  <nav class="nav__links" id="navLinks">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#work">Work</a>
+    <a href="#process">Process</a>
+    <a href="#contact" class="nav__cta">Let's talk</a>
+  </nav>
+</header>
+
+<!-- Floating WhatsApp button (number and message are filled in by script.js from WHATSAPP_NUMBER) -->
+<a class="wa-fab" id="waFab" href="#contact" target="_blank" rel="noopener" aria-label="Chat with Eslam on WhatsApp">
+  <span class="wa-fab__pulse" aria-hidden="true"></span>
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3.5A12.4 12.4 0 0 0 5.3 22.2L3.6 28.4l6.4-1.7A12.4 12.4 0 1 0 16 3.5zm0 22.7c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-3.8 1 1-3.7-.2-.4A10.3 10.3 0 1 1 16 26.2z"/><path d="M21.7 18.5c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1a8.4 8.4 0 0 1-4.2-3.7c-.3-.5.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.3 5.3 4.6 2 .9 2.7.9 3.7.8.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.5-.3z"/></svg>
+  <span class="wa-fab__label">Chat on WhatsApp</span>
+</a>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg" aria-hidden="true"><img src="img/me/brush.webp" alt="" width="1672" height="941" fetchpriority="high"></div>
+    <canvas class="hero__stars" id="stars" aria-hidden="true"></canvas>
+    <div class="hero__inner">
+      <div class="hero__text">
+        <p class="eyebrow reveal">Portfolio 2026</p>
+        <h1 class="hero__title">
+          <span class="line"><span>Eslam</span></span>
+          <span class="line"><span>Ayman</span></span>
+        </h1>
+        <p class="hero__role reveal">Brand &amp; Creative Lead</p>
+        <p class="hero__tag reveal">Visuals built to communicate, not just decorate.</p>
+        <div class="hero__actions reveal">
+          <a href="#work" class="btn btn--gold">View selected work</a>
+          <a href="#contact" class="btn btn--ghost">Get in touch</a>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="hero__scroll" aria-label="Scroll to about">Scroll</a>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Branding</span><i>✦</i><span>Visual Identity</span><i>✦</i><span>Social Campaigns</span><i>✦</i><span>Events &amp; Experiences</span><i>✦</i><span>Print &amp; Editorial</span><i>✦</i><span>AI &amp; Creative Direction</span><i>✦</i>
+      <span>Branding</span><i>✦</i><span>Visual Identity</span><i>✦</i><span>Social Campaigns</span><i>✦</i><span>Events &amp; Experiences</span><i>✦</i><span>Print &amp; Editorial</span><i>✦</i><span>AI &amp; Creative Direction</span><i>✦</i>
+    </div>
+  </div>
+
+  <!-- FEATURED: 3D curved carousel -->
+  <section class="featured" id="featured" aria-roledescription="carousel" aria-label="Featured work">
+    <div class="featured__glow" aria-hidden="true"></div>
+    <div class="featured__head">
+      <p class="eyebrow reveal">Featured work</p>
+      <h2 class="h2 reveal">Step into <em>the work.</em></h2>
+      <p class="featured__hint reveal">Drag, swipe or use the arrows. Click the center card to open the project.</p>
+    </div>
+    <div class="stage" id="stage" tabindex="0" aria-live="polite"></div>
+    <div class="featured__bar">
+      <div class="featured__now">
+        <span class="featured__idx" id="fIdx">01</span>
+        <span><strong id="fTitle"></strong><small id="fSub"></small></span>
+      </div>
+      <div class="featured__dots" id="fDots" role="tablist" aria-label="Choose project"></div>
+      <div class="featured__nav">
+        <button class="fnav" id="fPrev" aria-label="Previous project">←</button>
+        <button class="fnav" id="fNext" aria-label="Next project">→</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <figure class="about__img reveal">
+      <img src="img/me/profile.webp" alt="Painted portrait of Eslam Ayman against a starry night sky" loading="lazy" width="1672" height="941" data-parallax="0.08">
+    </figure>
+    <div class="about__text">
+      <p class="eyebrow reveal">Hello, I'm Eslam</p>
+      <h2 class="h2 reveal">I turn ideas into <em>visual experiences.</em></h2>
+      <p class="lead reveal">Graphic Designer with <strong>7+ years</strong> of professional experience creating visual solutions across Branding, Digital Campaigns, Events, and Print. I combine creative thinking with practical execution to transform ideas into work that communicates, connects, and delivers.</p>
+      <p class="reveal">I believe strong design starts with understanding the message, finding the right visual idea, and carrying it consistently, <span class="gold">from concept to final execution.</span></p>
+      <dl class="stats reveal">
+        <div><dt data-count="7" data-suffix="+">0</dt><dd>Years of experience</dd></div>
+        <div><dt data-count="100" data-suffix="+">0</dt><dd>Projects delivered</dd></div>
+        <div><dt class="stats__markets">KSA · EG · KW</dt><dd>Markets served</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section experience">
+    <div class="section__head">
+      <p class="eyebrow reveal">Experience</p>
+      <h2 class="h2 reveal">Experience that <em>shaped my work.</em></h2>
+    </div>
+    <ol class="timeline">
+      <li class="reveal timeline__wide">
+        <span class="timeline__date">2026 — Present · Full-time</span>
+        <h3>Senior Graphic Designer</h3>
+        <p class="timeline__org">Alfaresi · Marketing Agency, Kuwait</p>
+        <p>Social Media Campaigns · Art Direction · Brand Content · Client Accounts across Kuwait</p>
+      </li>
+      <li class="reveal">
+        <span class="timeline__date">2025 — Present</span>
+        <h3>Brand &amp; Creative Lead</h3>
+        <p class="timeline__org">HVD Egypt</p>
+        <p>Visual Communication · Social Media Campaigns · Events Branding · Brand Identity Development · Print Production Management · Creative Strategy · Exhibition Graphics · Global Marketing Support · Government Campaign Branding · Advertising Design</p>
+      </li>
+      <li class="reveal">
+        <span class="timeline__date">2024 — Present</span>
+        <h3>Senior Graphic Designer</h3>
+        <p class="timeline__org">Vivid Experience</p>
+        <p>Events Branding · Brand Identity Development · Exhibition Graphics · Presentation &amp; Slide Templates · Event Direction Proposals · AI Visuals · Social Media Campaigns</p>
+      </li>
+      <li class="reveal">
+        <span class="timeline__date">2019 — 2025</span>
+        <h3>Senior Graphic Designer</h3>
+        <p class="timeline__org">HVD Egypt</p>
+        <p>Visual Communication · Social Media Campaigns · Events Branding · Exhibition Graphics · Brand Identity Development · Creative Strategy</p>
+      </li>
+      <li class="reveal">
+        <span class="timeline__date">2015 — Present</span>
+        <h3>Senior Graphic Designer</h3>
+        <p class="timeline__org">Freelance</p>
+        <p>Events Branding · Brand Identity Development · Exhibition Graphics · Presentation &amp; Slide Templates · Event Direction Proposals · AI Visuals · Social Media Campaigns</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section services" id="services">
+    <div class="section__head">
+      <p class="eyebrow reveal">What I do</p>
+      <h2 class="h2 reveal">Design with purpose. <em>Think. Create. Deliver.</em></h2>
+    </div>
+    <figure class="banner reveal">
+      <img src="img/me/tools.webp" alt="Eslam Ayman surrounded by his design tools: Photoshop, Illustrator, CapCut, AI, a tablet and a laptop" loading="lazy" width="1672" height="941" data-parallax="0.06">
+    </figure>
+    <div class="services__grid">
+      <!-- Each service: number + line icon that draws itself in, title, copy, and deliverable tags pinned to the bottom -->
+      <article class="service service--x reveal" style="--i:0">
+        <span class="service__glow" aria-hidden="true"></span><span class="service__ghost" aria-hidden="true">01</span>
+        <div class="service__top"><span class="service__num">01</span>
+          <svg class="service__icon" viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M12 2.5 19 9l-7 12.5L5 9z"/><path pathLength="1" d="M12 21.5V12"/><circle pathLength="1" cx="12" cy="10" r="2"/></svg></div>
+        <h3>Branding &amp; Visual Identity</h3><p>Building distinctive visual systems that create recognizable brands.</p>
+        <ul class="service__tags"><li>Logo</li><li>Guidelines</li><li>Packaging</li></ul>
+      </article>
+      <article class="service service--x reveal" style="--i:1">
+        <span class="service__glow" aria-hidden="true"></span><span class="service__ghost" aria-hidden="true">02</span>
+        <div class="service__top"><span class="service__num">02</span>
+          <svg class="service__icon" viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M3 10.5v3a1 1 0 0 0 1 1h2.5L12 19V5L6.5 9.5H4a1 1 0 0 0-1 1z"/><path pathLength="1" d="M15.5 9a4 4 0 0 1 0 6"/><path pathLength="1" d="M18.5 6a8 8 0 0 1 0 12"/></svg></div>
+        <h3>Social Media &amp; Campaigns</h3><p>Creating engaging visuals built around clear communication and campaign objectives.</p>
+        <ul class="service__tags"><li>Campaigns</li><li>Reel covers</li><li>Ads</li></ul>
+      </article>
+      <article class="service service--x reveal" style="--i:2">
+        <span class="service__glow" aria-hidden="true"></span><span class="service__ghost" aria-hidden="true">03</span>
+        <div class="service__top"><span class="service__num">03</span>
+          <svg class="service__icon" viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M3 7h18v3a2 2 0 0 0 0 4v3H3v-3a2 2 0 0 0 0-4z"/><path pathLength="1" d="M15 7v10"/><path pathLength="1" d="m8 10.5 1 2 2 .3-1.5 1.4.4 2-1.9-1-1.9 1 .4-2L5 12.8l2-.3z"/></svg></div>
+        <h3>Events &amp; Experiences</h3><p>Transforming concepts into visual experiences across events, exhibitions, and activations.</p>
+        <ul class="service__tags"><li>Stage</li><li>Booths</li><li>Photo-op arches</li></ul>
+      </article>
+      <article class="service service--x reveal" style="--i:3">
+        <span class="service__glow" aria-hidden="true"></span><span class="service__ghost" aria-hidden="true">04</span>
+        <div class="service__top"><span class="service__num">04</span>
+          <svg class="service__icon" viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M12 3 21 8l-9 5-9-5z"/><path pathLength="1" d="m3 12.5 9 5 9-5"/><path pathLength="1" d="m3 16.5 9 5 9-5"/></svg></div>
+        <h3>Print &amp; Editorial</h3><p>Professional materials connecting digital ideas with physical experiences.</p>
+        <ul class="service__tags"><li>Invitations</li><li>Brochures</li><li>Merchandise</li></ul>
+      </article>
+      <article class="service service--x reveal" style="--i:4">
+        <span class="service__glow" aria-hidden="true"></span><span class="service__ghost" aria-hidden="true">05</span>
+        <div class="service__top"><span class="service__num">05</span>
+          <svg class="service__icon" viewBox="0 0 24 24" aria-hidden="true"><path pathLength="1" d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z"/><path pathLength="1" d="M18.5 14.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></svg></div>
+        <h3>AI &amp; Creative Direction</h3><p>Using emerging creative tools to explore and execute stronger visual concepts.</p>
+        <ul class="service__tags"><li>Concepts</li><li>Moodboards</li><li>AI visuals</li></ul>
+      </article>
+      <article class="service service--tools reveal" id="toolsCard">
+        <span class="tools__glow" aria-hidden="true"></span>
+        <span class="service__num">Tools</span><h3>Tools change. <em>Ideas matter.</em></h3>
+        <ul class="tools">
+          <li class="tool" style="--c:#31a8ff;--bg:#001e36;--i:0"><span class="tool__float"><span class="tool__ic">Ps</span></span><span class="tool__name">Photoshop</span></li>
+          <li class="tool" style="--c:#ff9a00;--bg:#330000;--i:1"><span class="tool__float"><span class="tool__ic">Ai</span></span><span class="tool__name">Illustrator</span></li>
+          <li class="tool" style="--c:#31a8ff;--bg:#001e36;--i:2"><span class="tool__float"><span class="tool__ic">Lr</span></span><span class="tool__name">Lightroom</span></li>
+          <li class="tool" style="--c:#9999ff;--bg:#00005b;--i:3"><span class="tool__float"><span class="tool__ic">Pr</span></span><span class="tool__name">Premiere Pro</span></li>
+          <li class="tool" style="--c:#ffffff;--bg:#111111;--i:4"><span class="tool__float"><span class="tool__ic">Cc</span></span><span class="tool__name">CapCut</span></li>
+          <li class="tool tool--ai" style="--c:#c9a7ff;--bg:#1a0f3a;--i:5"><span class="tool__float"><span class="tool__ic">✦</span></span><span class="tool__name">AI tools</span></li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- BRANDS -->
+  <!-- Client logos orbit the painted top-down photo in three rings. -->
+  <section class="orbit" id="clients" aria-labelledby="orbitTitle">
+    <div class="orbit__bg" aria-hidden="true"><img src="img/me/swirl-top.webp" alt="" loading="lazy" width="1672" height="941"></div>
+    <div class="orbit__head">
+      <p class="eyebrow reveal">Selected brands &amp; organizations</p>
+      <h2 class="h2 reveal" id="orbitTitle">In the orbit of <em>great clients.</em></h2>
+    </div>
+    <div class="orbit__stage" id="orbitStage" role="list" aria-label="Clients"></div>
+    <p class="orbit__caption" id="orbitCaption" aria-live="polite">Hover a logo to see who it is</p>
+  </section>
+
+  <!-- WORK -->
+  <section class="section work" id="work">
+    <div class="section__head">
+      <p class="eyebrow reveal">Selected works</p>
+      <h2 class="h2 reveal">Identities, campaigns, experiences <em>&amp; visual stories.</em></h2>
+    </div>
+    <div class="filters reveal" role="tablist" aria-label="Filter projects">
+      <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+      <button class="filter" data-filter="branding" role="tab" aria-selected="false">Branding</button>
+      <button class="filter" data-filter="events" role="tab" aria-selected="false">Events &amp; Experiences</button>
+      <button class="filter" data-filter="social" role="tab" aria-selected="false">Social Media</button>
+      <button class="filter" data-filter="print" role="tab" aria-selected="false">Print &amp; Corporate</button>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <!-- NUMBERS -->
+  <section class="section numbers" id="numbers">
+    <div class="numbers__bg" aria-hidden="true"><img src="img/me/floating.webp" alt="" loading="lazy" width="1672" height="941"></div>
+    <div class="section__head">
+      <p class="eyebrow reveal">By the numbers</p>
+      <h2 class="h2 reveal">The work, <em>counted.</em></h2>
+    </div>
+    <div class="bento" id="bento">
+      <article class="tile tile--clients reveal">
+        <div class="tile__head"><span class="odo" id="odoClients"></span><span class="tile__label">Clients &amp; organizations</span></div>
+        <p class="tile__sub">Ministries, authorities, brands and agencies across Saudi Arabia, Egypt and Kuwait.</p>
+        <div class="ticker" aria-hidden="true"><div class="ticker__row" id="tickA"></div><div class="ticker__row ticker__row--rev" id="tickB"></div></div>
+      </article>
+      <article class="tile tile--years reveal">
+        <span class="odo" id="odoYears"></span><span class="tile__label">Years of experience</span>
+        <span class="tile__sub">Professional, plus freelance since 2015</span>
+      </article>
+      <article class="tile tile--projects reveal">
+        <span class="odo" id="odoProjects"></span><span class="tile__label">Featured projects</span>
+        <span class="tile__sub">Across 4 disciplines</span>
+      </article>
+      <article class="tile tile--posts reveal">
+        <span class="odo" id="odoPosts"></span><span class="tile__label">Campaign posts &amp; reels</span>
+        <div class="tile__fan" id="postFan" aria-hidden="true"></div>
+      </article>
+      <article class="tile tile--live reveal">
+        <span class="odo" id="odoLive"></span><span class="tile__label">Ongoing accounts</span>
+        <ul class="livelist" id="liveList"></ul>
+      </article>
+      <article class="tile tile--designs reveal" id="tileDesigns" hidden>
+        <span class="odo" id="odoDesigns"></span><span class="tile__label">Designs delivered</span>
+        <span class="tile__sub">Logos, posts, signage, print and more</span>
+      </article>
+      <article class="tile tile--mix reveal">
+        <div class="donut">
+          <svg viewBox="0 0 200 200" id="donut" aria-hidden="true"></svg>
+          <div class="donut__center"><strong class="odo" id="donutTotal">0</strong><span>projects</span></div>
+        </div>
+        <div class="mix">
+          <span class="tile__label">Work by discipline</span>
+          <div class="mix__list" id="mixList"></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section process" id="process">
+    <div class="section__head">
+      <p class="eyebrow reveal">How I work</p>
+      <h2 class="h2 reveal">Every project starts <em>with why.</em></h2>
+    </div>
+    <ol class="steps">
+      <li class="reveal"><span>01</span><h3>Understand</h3><p>Brief · Objectives · Audience</p></li>
+      <li class="reveal"><span>02</span><h3>Explore</h3><p>Research · References · Ideas</p></li>
+      <li class="reveal"><span>03</span><h3>Create</h3><p>Concept · Art Direction · Design</p></li>
+      <li class="reveal"><span>04</span><h3>Refine</h3><p>Feedback · Development · Details</p></li>
+      <li class="reveal"><span>05</span><h3>Deliver</h3><p>Final Artwork · Production · Execution</p></li>
+    </ol>
+    <figure class="process__img reveal">
+      <img src="img/me/notes.webp" alt="Eslam Ayman covered in sticky notes, the start of every brief" loading="lazy" width="1672" height="941" data-parallax="-0.06">
+    </figure>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact__bg" aria-hidden="true"><img src="img/me/reach.webp" alt="" loading="lazy" width="1672" height="941"></div>
+    <div class="contact__inner">
+      <p class="eyebrow reveal">Contact</p>
+      <h2 class="contact__title reveal">You've seen my work.<em>Now let's create yours.</em></h2>
+      <!-- Project inquiry: no backend, the form composes a WhatsApp message to Eslam -->
+      <form class="inquiry reveal" id="inquiry" novalidate>
+        <p class="inquiry__eyebrow">Project inquiry</p>
+        <h3 class="inquiry__title">Tell me about your vision</h3>
+        <div class="inquiry__grid">
+          <label class="field"><span>Your name *</span>
+            <input name="name" type="text" autocomplete="name" placeholder="e.g. Horizon Brand / Yahia" required></label>
+          <label class="field"><span>Your phone</span>
+            <input name="phone" type="tel" autocomplete="tel" placeholder="+20 1xx xxx xxxx"></label>
+          <label class="field"><span>Your email</span>
+            <input name="email" type="email" autocomplete="email" placeholder="name@company.com"></label>
+        </div>
+        <fieldset class="field field--chips">
+          <legend>Services needed *</legend>
+          <div class="chips" id="inqServices">
+            <button type="button" class="chip" aria-pressed="false">Branding &amp; Visual Identity</button>
+            <button type="button" class="chip" aria-pressed="false">Social Media Campaigns</button>
+            <button type="button" class="chip" aria-pressed="false">Events &amp; Experiences</button>
+            <button type="button" class="chip" aria-pressed="false">Print &amp; Editorial</button>
+            <button type="button" class="chip" aria-pressed="false">AI &amp; Creative Direction</button>
+          </div>
+        </fieldset>
+        <div class="inquiry__grid inquiry__grid--2">
+          <label class="field"><span>Estimated budget</span>
+            <input name="budget" type="text" placeholder="e.g. $2,500 or EGP 80,000"></label>
+          <label class="field"><span>Timeline</span>
+            <select name="timeline">
+              <option value="">Select a timeline</option>
+              <option>As soon as possible</option>
+              <option>Within 2–4 weeks</option>
+              <option>Within 1–2 months</option>
+              <option>Flexible</option>
+            </select></label>
+        </div>
+        <label class="field"><span>Project overview *</span>
+          <textarea name="overview" rows="5" placeholder="Describe your project, goals, key deliverables, or target timeline in detail..." required></textarea></label>
+        <p class="inquiry__error" id="inqError" role="alert" hidden></p>
+        <button type="submit" class="inquiry__submit">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.08c-.24.68-1.42 1.3-1.96 1.35-.5.05-1.13.07-1.83-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.12 1.01-2.41.27-.29.58-.36.78-.36h.56c.18 0 .42-.07.66.5.24.58.82 2 .89 2.14.07.15.12.32.02.51-.1.19-.14.31-.29.48-.14.17-.3.38-.43.51-.14.14-.29.3-.13.59.17.29.74 1.22 1.59 1.97 1.09.97 2.01 1.27 2.3 1.42.29.14.46.12.63-.07.17-.2.72-.84.92-1.13.19-.29.38-.24.65-.14.27.1 1.7.8 1.99.95.29.14.48.22.55.34.07.12.07.7-.17 1.38Z"/></svg>
+          <span>Send inquiry on WhatsApp</span>
+        </button>
+        <p class="inquiry__note">Opens WhatsApp with your message ready, just hit send.</p>
+        <div class="inquiry__done" id="inqDone" hidden>
+          <strong>WhatsApp is open with your inquiry ready.</strong>
+          <span>Send it and I'll get back to you soon. If it didn't open, <a id="inqRetry" href="#" target="_blank" rel="noopener">tap here</a>.</span>
+        </div>
+      </form>
+      <p class="contact__or reveal">Or reach me directly</p>
+      <a class="contact__mail reveal" href="mailto:Eslama.ibrahem@gmail.com">Eslama.ibrahem@gmail.com</a>
+      <ul class="socials reveal">
+        <li><a href="https://wa.me/201152321914" target="_blank" rel="noopener">WhatsApp <span>011 5232 1914</span></a></li>
+        <li><a href="https://www.behance.net/eslamayman_arts" target="_blank" rel="noopener">Behance <span>eslamayman_arts</span></a></li>
+        <li><a href="https://www.linkedin.com/in/eslamaymanarts" target="_blank" rel="noopener">LinkedIn <span>eslamaymanarts</span></a></li>
+        <li><a href="https://www.instagram.com/eslamayman_arts" target="_blank" rel="noopener">Instagram <span>eslamayman_arts</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CLIENT REVIEWS (cards are rendered from TESTIMONIALS in script.js) -->
+  <section class="section reviews" id="reviews" aria-labelledby="reviewsTitle">
+    <div class="section__head">
+      <p class="eyebrow reveal">Client reviews</p>
+      <h2 class="h2 reveal" id="reviewsTitle">What clients say <em>about working together.</em></h2>
+    </div>
+    <div class="reviews__grid" id="reviewsGrid"></div>
+    <div class="reviews__cta reveal">
+      <p>Worked with me? I'd love to hear how it went.</p>
+      <a class="btn btn--ghost" id="reviewLink" href="#contact" target="_blank" rel="noopener">Share your feedback</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <span>© <span id="year"></span> Eslam Ayman</span>
+  <a href="#top">Back to top ↑</a>
+</footer>
+
+<!-- PROJECT MODAL -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+  <div class="modal__bar">
+    <button class="modal__nav" id="modalPrev" aria-label="Previous project">← Prev</button>
+    <span class="modal__count" id="modalCount"></span>
+    <button class="modal__nav" id="modalNext" aria-label="Next project">Next →</button>
+    <button class="modal__close" id="modalClose" aria-label="Close project">✕</button>
+  </div>
+  <div class="modal__body" id="modalBody"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
